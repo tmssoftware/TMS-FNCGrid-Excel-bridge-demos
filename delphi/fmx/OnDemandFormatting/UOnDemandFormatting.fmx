@@ -1,0 +1,153 @@
+object FMainForm: TFMainForm
+  Left = 0
+  Top = 0
+  Caption = 'On demand formatting'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object SaveDialog: TSaveDialog
+    DefaultExt = 'xlsx'
+    Filter = 'Excel 2007|*.xlsx|Excel 97/2003|*.xls'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+    Left = 192
+    Top = 64
+  end
+  object DataGrid: TTMSFNCGrid
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 445.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Options.Editing.CalcFormat = '%g'
+    Options.Grouping.CalcFormat = '%g'
+    Options.Grouping.GroupCountFormat = '(%d)'
+    Options.IO.XMLEncoding = 'ISO-8859-1'
+    Options.Mouse.ColumnSizeMargin = 6
+    Options.Mouse.RowSizeMargin = 6
+    Columns = <
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end>
+    TopRow = 1
+    Appearance.FixedLayout.Fill.Color = xFFE6E6E6
+    Appearance.FixedLayout.Font.Name = 'Segoe UI'
+    Appearance.FixedLayout.Font.StyleExt = {00070000000000000004000000}
+    Appearance.NormalLayout.Fill.Color = claNull
+    Appearance.NormalLayout.Font.Name = 'Segoe UI'
+    Appearance.GroupLayout.Fill.Color = xFF6E93C3
+    Appearance.GroupLayout.Font.Color = claWhite
+    Appearance.GroupLayout.Font.Name = 'Segoe UI'
+    Appearance.SummaryLayout.Fill.Color = xFFB9C5D5
+    Appearance.SummaryLayout.Font.Name = 'Segoe UI'
+    Appearance.SelectedLayout.Fill.Color = claLightsteelblue
+    Appearance.SelectedLayout.Font.Color = claWhite
+    Appearance.SelectedLayout.Font.Name = 'Segoe UI'
+    Appearance.FocusedLayout.Fill.Color = claLightsteelblue
+    Appearance.FocusedLayout.Font.Color = claWhite
+    Appearance.FocusedLayout.Font.Name = 'Segoe UI'
+    Appearance.FixedSelectedLayout.Fill.Color = claLightsteelblue
+    Appearance.FixedSelectedLayout.Font.Name = 'Segoe UI'
+    Appearance.BandLayout.Fill.Color = claLightyellow
+    Appearance.BandLayout.Font.Name = 'Segoe UI'
+    Appearance.ProgressLayout.Format = '%.0f%%'
+    LeftCol = 1
+    ScrollMode = scmItemScrolling
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 445.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnExport: TButton
+      Position.X = 4.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Export'
+      OnClick = btnExportClick
+    end
+    object btnAbout: TButton
+      Position.X = 221.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'About'
+      OnClick = btnAboutClick
+    end
+    object btnExportAsStrings: TButton
+      Position.X = 85.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 104.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Export as Strings'
+      OnClick = btnExportAsStringsClick
+    end
+  end
+  object ExcelExport: TTMSFNCGridExcelExport
+    Grid = DataGrid
+    Version = '1.0'
+    OnExportCell = ExcelExportExportCell
+    OnExportComment = ExcelExportExportComment
+    Left = 104
+    Top = 72
+  end
+end

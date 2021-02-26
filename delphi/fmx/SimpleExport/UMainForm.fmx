@@ -1,0 +1,386 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'TTMSFNCExcelExport Simple Demo FMX'
+  ClientHeight = 510
+  ClientWidth = 726
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Anchors = [akLeft, akTop, akBottom]
+    Position.X = 8.000000000000000000
+    Position.Y = -26.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 536.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Panel2: TRectangle
+      Position.X = 8.000000000000000000
+      Position.Y = 35.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 27.000000000000000000
+      Size.PlatformDefault = False
+      object Label1: TLabel
+        Position.X = 45.000000000000000000
+        Position.Y = 5.000000000000000000
+        Text = 'Export Options'
+        TabOrder = 0
+      end
+    end
+    object cbFormatting: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Formatting'
+    end
+    object cbCellMargins: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 95.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Cell Margins'
+    end
+    object cbCellsAsStrings: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 118.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Cells as strings'
+    end
+    object cbCellSizes: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 141.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Cell Sizes'
+    end
+    object cbFormulas: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 164.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Formulas'
+    end
+    object cbHardBorders: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 187.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Hard borders'
+    end
+    object cbHiddenColumns: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 210.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Text = 'Hidden Columns'
+    end
+    object cbHiddenRows: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 233.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'Hidden Rows'
+    end
+    object cbImages: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 256.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      Text = 'Images'
+    end
+    object cbOutlines: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 303.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      Text = 'Outlines'
+    end
+    object cbRawHTML: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 341.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+      Text = 'Raw HTML'
+    end
+    object cbReadOnlyToLocked: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 387.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 12
+      Text = 'ReadOnly -> Locked'
+    end
+    object cbShowGridlines: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 410.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 13
+      Text = 'Show Gridlines'
+    end
+    object cbSummaryRowsBelow: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 433.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 14
+      Text = 'Summary rows below'
+    end
+    object cbStandardPalette: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 456.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 15
+      Text = 'Excel standard palette'
+    end
+    object cbWordWrapped: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 479.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 16
+      Text = 'Word wrapped'
+    end
+    object cbCheckboxes: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 279.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 17
+      Text = 'Checkboxes'
+    end
+    object cbHyperlinks: TCheckBox
+      IsChecked = True
+      Position.X = 8.000000000000000000
+      Position.Y = 502.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 18
+      Text = 'Hyperlinks'
+    end
+  end
+  object DataGrid: TTMSFNCGrid
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 216.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 443.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Options.Editing.CalcFormat = '%g'
+    Options.Grouping.CalcFormat = '%g'
+    Options.Grouping.GroupCountFormat = '(%d)'
+    Options.IO.XMLEncoding = 'ISO-8859-1'
+    Options.Mouse.ColumnSizeMargin = 6
+    Options.Mouse.RowSizeMargin = 6
+    Columns = <
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        BorderWidth = 1
+        FixedFont.Family = 'Tahoma'
+        FixedFont.Name = 'Tahoma'
+        FixedFont.StyleExt = {00070000000000000004000000}
+        Font.Family = 'Tahoma'
+        Font.Name = 'Tahoma'
+        ID = ''
+        Width = 68.000000000000000000
+      end>
+    TopRow = 1
+    Appearance.FixedLayout.Fill.Color = x00E6E6E6
+    Appearance.FixedLayout.Font.Family = 'Tahoma'
+    Appearance.FixedLayout.Font.Name = 'Tahoma'
+    Appearance.FixedLayout.Font.StyleExt = {00070000000000000004000000}
+    Appearance.NormalLayout.Fill.Color = claNull
+    Appearance.NormalLayout.Font.Family = 'Tahoma'
+    Appearance.NormalLayout.Font.Name = 'Tahoma'
+    Appearance.GroupLayout.Fill.Color = x00C3936E
+    Appearance.GroupLayout.Font.Family = 'Tahoma'
+    Appearance.GroupLayout.Font.Color = claWhite
+    Appearance.GroupLayout.Font.Name = 'Tahoma'
+    Appearance.SummaryLayout.Fill.Color = x00D5C5B9
+    Appearance.SummaryLayout.Font.Family = 'Tahoma'
+    Appearance.SummaryLayout.Font.Name = 'Tahoma'
+    Appearance.SelectedLayout.Fill.Color = x00DEC4B0
+    Appearance.SelectedLayout.Font.Family = 'Tahoma'
+    Appearance.SelectedLayout.Font.Color = claWhite
+    Appearance.SelectedLayout.Font.Name = 'Tahoma'
+    Appearance.FocusedLayout.Fill.Color = x00DEC4B0
+    Appearance.FocusedLayout.Font.Family = 'Tahoma'
+    Appearance.FocusedLayout.Font.Color = claWhite
+    Appearance.FocusedLayout.Font.Name = 'Tahoma'
+    Appearance.FixedSelectedLayout.Fill.Color = x00DEC4B0
+    Appearance.FixedSelectedLayout.Font.Family = 'Tahoma'
+    Appearance.FixedSelectedLayout.Font.Name = 'Tahoma'
+    Appearance.BandLayout.Fill.Color = x00E0FFFF
+    Appearance.BandLayout.Font.Family = 'Tahoma'
+    Appearance.BandLayout.Font.Name = 'Tahoma'
+    Appearance.ProgressLayout.Format = '%.0f%%'
+    LeftCol = 1
+    ScrollMode = scmItemScrolling
+    Left = 160
+    Top = 8
+    object SaveDialogExcel: TSaveDialog
+      DefaultExt = 'xlsx'
+      Filter = 'Excel 2007|*.xlsx|Excel 97/2003|*.xls'
+      Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+      Left = 464
+      Top = 320
+    end
+    object SaveDialogPdf: TSaveDialog
+      DefaultExt = 'pdf'
+      Filter = 'Pdf files|*.pdf'
+      Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+      Left = 464
+      Top = 368
+    end
+    object SaveDialogHtml: TSaveDialog
+      DefaultExt = 'htm'
+      Filter = 'Html files|*.htm'
+      Options = [ofOverwritePrompt, ofHideReadOnly, ofEnableSizing]
+      Left = 464
+      Top = 416
+    end
+  end
+  object BtnExportPdf: TButton
+    Anchors = [akLeft, akBottom]
+    Position.X = 352.000000000000000000
+    Position.Y = 472.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Export to PDF'
+    OnClick = BtnExportPdfClick
+    Left = 135
+    Top = 520
+  end
+  object BtnExportHTML: TButton
+    Anchors = [akLeft, akBottom]
+    Position.X = 480.000000000000000000
+    Position.Y = 472.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Export to HTML'
+    OnClick = BtnExportHTMLClick
+    Left = 262
+    Top = 520
+  end
+  object BtnAbout: TButton
+    Anchors = [akLeft, akBottom]
+    Position.X = 624.000000000000000000
+    Position.Y = 472.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'About'
+    OnClick = BtnAboutClick
+    Left = 440
+    Top = 520
+  end
+  object BtnExportExcel: TButton
+    Anchors = [akLeft, akBottom]
+    Position.X = 216.000000000000000000
+    Position.Y = 472.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Export to XLS/XLSX'
+    OnClick = BtnExportExcelClick
+    Left = 8
+    Top = 521
+  end
+  object ExcelExport: TTMSFNCGridExcelExport
+    Grid = DataGrid
+    Version = '1.0'
+    Left = 336
+    Top = 320
+  end
+end
