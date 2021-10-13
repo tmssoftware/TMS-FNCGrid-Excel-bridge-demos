@@ -8,8 +8,8 @@ You can find a description of each demo in the [documentation](https://doc.tmsso
 **:book: Note** We update this repository automatically every time we release a new FNC Grid-Excel Bridge version. So if you have notifications integrated with github, you can subscribe to this feed to be notified of new releases.
 
 
-## New in v 3.0
+## New in v 3.1 - September 2021
 
 
-- **First Release.** This is the first release of TMS FNC Grid-Excel components, based on the existing TMS VCL Grid-Excel and TMS FMX Grid Excel components.
+- **Rad Studio 11 support.** Added Rad Studio 11 Support.
 
