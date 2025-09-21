@@ -8,8 +8,8 @@ You can find a description of each demo in the [documentation](https://doc.tmsso
 **:book: Note** We update this repository automatically every time we release a new FNC Grid-Excel Bridge version. So if you have notifications integrated with github, you can subscribe to this feed to be notified of new releases.
 
 
-## New in v 3.1 - September 2021
+## New in v 3.4 - September 2025
 
 
-- **Rad Studio 11 support.** Added Rad Studio 11 Support.
+- **Rad Studio 13 support.** Added Rad Studio 13 Support.
 
